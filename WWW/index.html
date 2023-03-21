@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./js/api.js"></script>
+</head>
+<body>
+    <div class="container mt-2">
+        <h1>REST API</h1>
+        <button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#productModal">Add data</button>
+
+        <table class="table table-striped" id="data">
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>phone</th>
+                <th>email</th> 
+                <th>country</th>  
+                <th>currency </th>         
+                <th>option</th>
+              </tr>
+            </thead>
+            <tbody >
+            </tbody>
+          </table>
+        </div>
+    </div>
+
+    <!-- Modal -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add data</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           
+            <div class="mb-3 mt-3">
+              <label for="name" class="form-label">name:</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">phone:</label>
+              <input type="text" class="form-control" id="phone" placeholder="Enter phone" name="phone">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">email:</label>
+              <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="country" class="form-label">country:</label>
+                <input type="text" class="form-control" id="country" placeholder="Enter country" name="country">
+              </div>
+            <div class="mb-3">
+                <label for="currency" class="form-label">currency:</label>
+                <input type="text" class="form-control" id="currency" placeholder="Enter currency" name="currency">
+              </div>
+           
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="add()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
